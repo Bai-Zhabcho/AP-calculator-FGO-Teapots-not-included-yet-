@@ -1,1 +1,53 @@
-﻿
+using System;
+
+namespace MyApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Master's max AP");
+            int maxAP = int.Parse(Console.ReadLine());  
+            Console.WriteLine("Bond remeining:");
+            int bondRemaining = int.Parse(Console.ReadLine());
+            Console.WriteLine("Bond per stage:");
+            int bondPerStage = int.Parse(Console.ReadLine());
+            Console.WriteLine("AP per stage");
+            int APPerStage = int.Parse(Console.ReadLine());
+            int timesNeeded = bondRemaining / bondPerStage;
+            int APNeeded = timesNeeded * APPerStage;
+            Console.WriteLine("Insert apple type (Gold, Silver, Blue, Bronze)");
+            string appleType = Console.ReadLine();
+            int forty = 40;
+            int ten = 10;
+            if (appleType == "Gold")
+            {
+                int appleAP = maxAP;
+                int applesNeeded = appleAP ;
+                int applesNumber = APNeeded / applesNeeded; 
+                Console.WriteLine($"You need to do {timesNeeded} stages, and you will need {APNeeded} AP aka {applesNumber} apples");
+            }
+            else if (appleType == "Silver")
+            {
+                int appleAP = maxAP/2;
+                int applesNeeded = appleAP;
+                int applesNumber = APNeeded / applesNeeded;
+                Console.WriteLine($"You need to do {timesNeeded} stages, and you will need {APNeeded} AP aka {applesNumber} apples");
+            }
+            else if (appleType == "Blue")
+            {
+                int appleAP =forty ;
+                int applesNeeded = appleAP;
+                int applesNumber = APNeeded / applesNeeded;
+                Console.WriteLine($"You need to do {timesNeeded} stages, and you will need {APNeeded} AP aka {applesNumber} apples");
+            }
+            else
+            {
+                int appleAP = ten ;
+                int applesNeeded = appleAP;
+                int applesNumber = APNeeded / applesNeeded;
+                Console.WriteLine($"You need to do {timesNeeded} stages, and you will need {APNeeded} AP aka {applesNumber} apples");
+            }
+        }
+    }
+}﻿
